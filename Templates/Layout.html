@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="../static/res/images/pageicon.png" type="image/icon type" />
+    <title>{%block title%}{%endblock%}</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+
+    <div class="flexingtitle">
+      <a href="/" class="Theday">
+        <h1>The Day</h1>
+      </a>
+      <a href="https://aastcs.carrd.co" target="_blank"
+        ><img src="../static/res/images/logo2.png" alt="" class="watermark"
+      /></a>
+    </div>
+  </head>
+
+  <body>
+  <div class="contLinks">
+  <div class="links">
+  
+  {% block content %}
+	{% endblock %}
+
+    </div>
+    </div>
+    <img src="../static/res/images/3204572.webp" alt="" class="BG">
+  </body>
+</html>

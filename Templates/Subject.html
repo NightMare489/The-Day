@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>    
+    </script>
+    <title>MultiMedia report ans</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../static/res/images/922687.png" type="image/icon type">
+
+    <link rel="stylesheet" href="../static/css/style2.css">
+
+        <div class="flexingtitle">
+        <a href="/" class="Theday">
+            <h1>The Day</h1>
+        </a>
+        <a href="https://aastcs.carrd.co" target="_blank"><img src="../static/res/images/logo2.png" alt="" class="watermark"></a>
+    </div>
+</head>
+
+<body>
+    <div class="container">
+        <div class="flexing wrap">
+            <div>
+                <h2 class="topLabel">
+                    Multi Media <a href="../static/res/data/Report_2022.pdf" target="_blank" class="blue">report</a> answers </h2>
+                <div class="flexing warp">
+                    <h6 class="names">Abdo Tolba</h6>
+
+                    <h6 class="names">Yaser Shaban</h6>
+
+                    <h6 class="names">Yousef Alaa</h6>
+                </div>
+
+            </div>
+
+            <select id="swi" onchange="swtichTheme()">
+                <option value="Dark">Dark</option>
+                <option value="Light">Light</option>
+            </select>
+
+
+
+            
+        </div>
+        <div id="accordion">
+            {%for i in range(0,(Data|length))%}
+            <div class="card">
+                <div class="{{'card-header head%d'%(i+1)}}">
+                    <a class="card-link" data-toggle="collapse" href={{"#collapse%d"%(i+1)}}>
+                        {{Data[i][0]|safe}}
+                    </a>
+                    <input type="checkbox" class="ckSize" id={{"ck%d"%(i+1)}} onclick="ckBox({{i+1}},this)">
+                </div>
+                <div id={{"collapse%d"%(i+1)}} class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                       {{Data[i][1]|safe}}
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+
+
+        </div>
+    </div>
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>

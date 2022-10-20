@@ -1,0 +1,25 @@
+{% extends "Layout.html" %}
+{%block title%}
+Semester {{sem}}
+{%endblock%}
+{% block content %}
+        {%for sub in Subjects%}
+        <button
+        {%if sub[1] == 0 %}
+          onclick="
+          location='/Subject/{{sub[0]}}'"
+          {%endif%}
+          {%if sub[1] == 0 %}
+
+          class="done"
+          {%else%}
+          class="NO"
+          {%endif%}>
+          <span {%if sub[1] != 0 %} class="NO" {%endif%}>
+            {{sub[0]}}
+           
+          </span>
+        </button>
+        {%endfor%}
+{% endblock %}
+

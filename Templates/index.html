@@ -1,0 +1,19 @@
+{% extends "Layout.html" %}
+
+{%block title%}
+Semesters
+{%endblock%}
+
+{% block content %}
+    {%for x in range(0,9)%}
+
+        <button
+          onclick="location='/Semster/{{x}}'"
+          class="done">
+          <span>
+            Semster {{x}}
+          </span>
+        </button>
+    {%endfor%}
+
+    {% endblock %}

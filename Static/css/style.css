@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.flexingtitle {
+  background-color: rgb(13, 61, 61);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+}
+
+.Theday {
+  text-decoration: none;
+  font: 1em sans-serif;
+  background-color: antiquewhite;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.watermark {
+  padding: 1rem;
+  border-radius: 50px;
+  width: 10rem;
+  height: auto;
+}
+
+.contLinks {
+  margin: 1rem;
+  height: 80vh;
+  display: grid;
+  justify-content: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+body {
+  background-color: #121212;
+}
+
+.links .done {
+  background-color: #06790c;
+  /* width: 80vw;
+    height: auto;
+    display: grid;
+    grid-template-rows:    1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    align-items: center; */
+}
+
+.links button {
+  /* margin: 5vh;
+    border-radius: 5rem; */
+
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1rem;
+  padding: 20px;
+  /* width: 200px; */
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.links button span {
+  overflow: hidden;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.links button span:after {
+  /* background-image: url(../res/images/pageicon.png); */
+  /* background-repeat: no-repeat; */
+  /* background-position: center bottom; */
+  /* content: 'GO'; */
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.links button .NO:after {
+  content: "\274C";
+}
+.NO {
+  text-decoration-color: red;
+  text-decoration: line-through;
+}
+.links button:hover span {
+  padding-right: 2rem;
+}
+
+.links button:hover span div {
+  display: block;
+
+  /* background-image: url('../res/images/pageicon.png'); */
+  background-repeat: no-repeat;
+  width: 50px;
+  height: auto;
+}
+
+.links button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.BG {
+    position: fixed;
+
+  pointer-events: none;
+  top: 0;
+  
+  opacity: 0.09;
+  z-index: -1;
+}
